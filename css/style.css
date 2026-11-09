@@ -1,5 +1,80 @@
-/*Configurações gerais e variáveis*/ 
-/* Definição de cores para serem reutilizadas*/
-/*: root => O root, representa o elemento raiz da página HTML*/
-/* Ficando disponivel para toda a página html*/
+/* Configurações gerais e variaveis */
+/* Definição de Cores para serem reutilizadas */
+/* :root => O root, representa o elemento raiz da pagina HTML <html>*/
+/* Ficando disponivel para a toda a pagina HTML */
+ 
+:root {
+    --prymary-color: #1a1a2e;
+    --accent-color: #e63946;
+    --bg-color: #f8f9fa;
+    --card-bg:#ffffff;
+    --text-color:#2b2d42;
+    --border-color:#e0e0e0;
+    --success-color:#2a9d8f;
+}
+ 
+/* Estilos basicos para todos os elementos da pagina */
+/* O asterico '*' é o seletor universal, ele seleciona todos os elementos da pagina */
+ 
+* {
+    box-sizing: border-box; /* Controla como o navegador calcula a largura e altura dos elementos*/
+    margin: 0; /* Remove as margens externas padrão */
+    padding: 0; /* Remove os espaçamentos internos padrão */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex; /* Transforma um elemento container flexivel, facilitando o alinhamento e distribuição dos elementos de um pagina*/
+    flex-direction: column; /* Organiza os elementos de cima para baixo, muito utilizado para formularios, menus ferticais, barras laterais etc. */
+    min-width: 100vh; /* Define a altura minima de um elemento HTML como 100% da altura da janela do navegador */
+    /* vh = viewport Height = altura da área visivel da tela do navegador */
+}
+ 
+/* Trabalhando a Classe .container */
+/* A Classe container é normalmente usada para centralizar e organizar o conteudo principal da pagina */
+.container{
+    max-width: 1200px;/* Define a largura maxima do elemento */
+    margin: 2rem auto; /* Define margens externas */
+    /* rem é uma unidade baseada no tamanho da fonte raiz, exemplo: 1rem = 16px entao 2rem = 32px */
+    padding: 0 1rem; /* Define espaço interno - 0px em cima e embaixo - 1rem = 16px nas laterais */
+    flex: 1; /* Ocupe todo o espaço disponivel */
+}
+ 
+/* Cabeçalho e Navegação */
+header{
+    background-color: var(--prymary-color);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+ 
+.header-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Quebra de linha  quando não houver espaço suficiente */
+}
+ 
+header h1{
+    font-size: 1.8rem;
+    letter-spacing: 1px; /* Controla  o espaçamento entre os caracteres (letras) de um texto */
+}
+ 
+nav a{
+    color: #edf2f4;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
+nav a:hover, nav a.active{
+    color: var(--accent-color);
+                
+}
+ 
