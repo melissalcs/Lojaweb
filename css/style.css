@@ -121,5 +121,123 @@ nav a:hover, nav a.active{
 }
 
 .carrossel-overlay{
+    position: relative;
+    z-index: 2;
+    background:rgba(0,0,0, 0.45);
+    backdrop-filter: blur(4px); /*aplica efeito de desfoque ao que está atrás de um elemento*/
+    padding: 2.2rem 3rem;
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+    max-width: 720px;
+    margin: 0 1.5rem; /*define o espaçamento interno*/
+    border: 1px solid rgba(255,255,255, 0.25);
+    box-shadow: 0 8px 32px rgba(0,0,0, 0.35); /*adiciona uma sombra ao redor de um elemento*/ 
+    /* 0 => sem deslocamento horizontal
+    8px => sombra deslocada 8px p baixo
+    32px => desfoque da sombra
+    rgba => preto com 35% de opacidade transparência */
+}
 
+.carrossel-overlay h2{
+    font-size: 2.3rem;
+    margin-bottom: 0.9rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0, 0.4);
+}
+
+.carrossel-overlay p{
+    font-size: 1.15rem; /*se o padrão da fonte for de 16px = 18.4px* aumento de 15%*/
+    margin-bottom: 1.4rem; /*adiciona um espaço abaixo do elemento 1.4 = 22.4px*/
+    opacity: 0.95; /*coloca a transparência no elemento */
+    line-height: 1.4;
+}
+
+.carrossel-overlay .btn-banner{
+    display: inline-block;
+    background-color:  var(--accent-color);
+    color: white;
+    padding: 0.75rem 1.0rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(230,57,70, 0.4);
+}
+
+
+.carrossel-overlay .btn-banner:hover{
+    background-color: #ff4d5a;
+    transform: translate(-2px);
+    box-shadow: 0 6px 16px rgba(230,57,70, 0.6);
+}
+
+/*Botões laterais*/
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50px);
+    background: rgba(0,0,0, 0.45);
+    color: white;
+    border: 1px solid rgba(255,255,255, 0.3);
+    font-size: 1.4rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    transition: background 0.3s, transform 0,2s;
+}
+
+.carrossel-btn:hover{
+    background: var(--accent-color);
+    transform: translate(-50%) scale(1.1);
+}
+
+.btn-prev{left: 15px;} /*botao canto esquerdo*/
+.btn-next{right: 15px;} /*botão canto direito*/
+
+.carrossel-indicadores{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /*Crial uma animação suave, all = aplica a transição em todas as propriedades*/
+}
+
+.dot.active, .dot:hover{
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+    width: 26px;
+    border-radius: 12px;
+}
+
+.titulo-secao{
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 0.8rem;
+}
+
+/* Vitrine de produtos*/
+
+.grid-produto{
+    background-color: var(--card-bg);
 }
