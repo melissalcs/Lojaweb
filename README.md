@@ -63,7 +63,7 @@ style-store/
 │   └── main.js
 ├── index.html
 ├── feminina.html
-├── masculina.html
+├── masculino.html
 ├── infantil.html
 ├── cliente.html
 ├── vendedor.html
